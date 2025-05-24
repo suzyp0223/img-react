@@ -6,11 +6,11 @@ import { RotatingLines } from "react-loader-spinner";
 import useIntersectionObserver from "@suzyp0223/use-intersection-observer";
 // console.log("useIntersectionObserver: ", useIntersectionObserver);
 
-const AccesKey = `RzET3BuayfQPFkw2I2ughAAj4ox4S0J0WSwJSFogL2M`;
+const AccessKey = `RzET3BuayfQPFkw2I2ughAAj4ox4S0J0WSwJSFogL2M`;
 const getKey = (pageIndex, previousPageData, query) => {
   if (!query) return null;
   if (previousPageData && previousPageData?.results?.length === 0) return null;
-  return `https://api.unsplash.com/search/photos?client_id=${AccesKey}&page=${
+  return `https://api.unsplash.com/search/photos?client_id=${AccessKey}&page=${
     pageIndex + 1
   }&query=${query}&per_page=12`;
 };
